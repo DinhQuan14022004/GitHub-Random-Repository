@@ -1,0 +1,100 @@
+body {
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  background: #f4f4f9;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown__selected{
+    border: solid;
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
+}
+.dropdown__selected::after{
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid red;
+}
+
+.dropdown__list{
+    position: absolute;
+    width: 260px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    margin: 5px;
+    z-index: 5;
+    background-color: #f4f4f9;
+
+}
+.dropdown__list li{
+  border-bottom: 2px solid #ccc;
+  padding: 20px;
+  cursor: pointer;
+}
+
+
+.dropdownList{
+    display: flex;
+}
+.dropdown__item::after {
+  content: "✓";
+  visibility: hidden;
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+}
+.selected::after{
+visibility: visible;
+}
+.state{
+    background-color: #e9ecef;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    display: block;
+}
+.repoCard{
+    border: solid;
+    border-radius: 10px;
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.err{
+    background-color: red;
+}
+.hidden{
+    display: none;
+}
+.refresh{
+    width: 270px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
